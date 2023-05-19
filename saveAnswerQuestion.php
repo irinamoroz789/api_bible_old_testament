@@ -5,7 +5,6 @@
     $date = date("Y-m-d H:i:s");
 
     if(isset($_POST)) {
-    //    echo $date;
 
         $result = $conn->query("SELECT count(*) FROM result_tests WHERE test_id ='{$_POST['id_test']}' AND  question_id = '{$_POST['id_question']}' AND  user_token = '{$_POST['token']}' ") or die();
         $res = $conn->query("SELECT FROM result_tests WHERE test_id ='{$_POST['id_test']}' AND  question_id = '{$_POST['id_question']}' AND  user_token = '{$_POST['token']}' ");
